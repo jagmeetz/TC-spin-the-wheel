@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TC Columbia University</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
-    <!-- top heading bar -->
-    <div id="top_bar">
-        <div id ="logo">
-            <img src="tc_png.png" alt="Teachers College" height="130px">
-        </div>
-        <div id="heading">
-            <h1>Welcome from Teachers College, Columbia University</h1>
-        </div>
-    </div>
-
-    <div class="wrapper">
-      <div class="container">
-        <canvas id="wheel"></canvas>
-        <button id="spin-btn">Spin</button>
-            <div class="arrow">
-                <img src="arrow.png" alt="spinner-arrow" />
+    <script src="https://apis.google.com/js/api.js"></script>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+        <!-- top heading bar -->
+        <div id="top_bar">
+            <div id ="logo">
+                <img src="tc_png.png" alt="Teachers College" height="130px">
             </div>
-                
-            
+            <div id="heading">
+                <h1>Welcome from Teachers College, Columbia University</h1>
+            </div>
         </div>
-      <div id="final-value">
-        <p>Click On The Spin Button To Start</p>
-      </div>
-    </div>
-    <!-- Chart JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <!-- Chart JS Plugin for displaying text over chart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+
+        <div class="wrapper">
+            <div class="container">
+                <div id="select_aa_name">
+                    <p>Select Academy Name</p>
+                    <br>
+                </div>
+                
+                <select name="aa_dropdown" id="aa_dropdown">
+
+                  </select>
+                  <br><br>
+                  <input type="password" id="password" placeholder="Enter Password" name="fname">
+                  <br><br>
+                  <button id="password_check" type="submit" onclick="on_click_pass_check()">Submit</button>
+
+              </div>
+          </div>
+          <script src="script.js"></script>
+           <!--Calling google APIs-->
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+</body>
 </html>
